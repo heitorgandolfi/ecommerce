@@ -5,9 +5,11 @@ class BottomNavigatorItems extends StatelessWidget {
     super.key,
     this.onTap,
     this.icon,
+    this.color,
   });
   final void Function()? onTap;
   final IconData? icon;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class BottomNavigatorItems extends StatelessWidget {
       child: SizedBox(
         height: 35,
         width: 35,
-        child: Icon(icon, color: Colors.white, size: 28),
+        child: Icon(icon, color: color, size: 28),
       ),
     );
   }
